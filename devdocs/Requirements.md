@@ -1,6 +1,6 @@
 # Requirements
 
-A smart contract system that allows individuals to challenge each other on random topics. A challenge pool comes with a topic, monetary commitment value and a maturity time. Anyone can initiate a challenge pool and anyone can join a challenge pool as long as they like the terms and conditions on the pool. A pool has a limit of maximum number of people who can join. All these are abstract, and example could be a challenge pool that is initialized on the correct score outcome of an upcoming football match.
+A smart contract system that allows individuals to challenge each other on random topics. A challenge pool comes with a topic, monetary commitment value and a maturity time. Anyone can initiate a challenge pool and anyone can join a challenge pool as long as they like the terms and conditions on the pool. A pool has a limit of maximum number of people who can join. All these are abstract, an example could be a challenge pool that is initialized on the correct score outcome of an upcoming football match.
 
 The initiator will initiate the pool, stake a certain amount on their predicted outcome. Anyone can later join, stake the same amount on their predicted outcome as well. If the match is between say Manchester and liverpool. Pool creator A initializes a pool with 1 eth and score prediction of 1-1. Another person B comes along to the pool and is interested in the terms of the pool. So this person also stakes 1 eth and gives their score prediction of 2-1. Before the joining deadline on the pool, anyone can join until the pool joining limit is reached, that is the maximum number of people who can join the pool.
 
@@ -29,7 +29,6 @@ Once the pool matures, if there are no winners, all participants gets back their
 
 The user interface should be more social and make users feel like they are not alone when browsing the site. For example show a pop up when a new pool is created, some ui indicator, share invite links to pools. These little effects will give the social feeling of participation. However, the absolutely important pages are as follows;
 
-  
 
 1. Activity/Landing Page
 2. Challenge Topics Lists Page
