@@ -17,6 +17,52 @@ The main contract, keeps track of the challenges being run.
 
 - PoolChallenge
 
+#### Structs
+```Typescript
+type address = string;
+type bytes = string;
+type Topic = {
+    title: string,
+    description: string,
+    maintainer: address,
+    evaluator: address
+}
+enum PoolState {
+    open,
+    closed,
+    stale
+}
+interface Participant {
+    participant: address;
+    proposal: bytes;
+}
+interface Challenge {
+    topicId: number;
+    topic: Topic;
+    stake: number
+    createdAt: number;
+    maturity: number;
+    state: PoolState;
+    participants: Participant[];
+    winners: address[];
+    losers: address[];
+    results: bytes;
+    params: bytes;
+}
+
+interface CreateChallenge {
+    topicId: number;
+    maturity: number;
+    param: bytes;
+    proposal: bytes;
+    stake: number
+}
+
+interface JoinChallenge {
+    challengeId: number;
+    proposal: bytes;
+}
+```
 ### PoolManager
 This contracts periodically checks the ChallengePool contract for matured pools and closes them.
 It is chainlink keeper compatible and is automated by chainlink automation.
@@ -32,12 +78,23 @@ Keeps track of all challenge topics.
 #### Functions
 
 - Create Topic
-- Modify Topic
-- Remove Topic
+- Disable Topic
+- Enable Topic
 
 #### Events
 
 - PoolTopic
+
+#### Structs
+```Typescript
+type address = string;
+type Topic = {
+    title: string,
+    description: string,
+    maintainer: address,
+    evaluator: address
+}
+```
 
 ### Evaluators
 These contracts evaluate a pool upon maturity and determines the winners and loosers.
